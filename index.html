@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+
+        }
+        
+        .content{
+            max-width:1250px;
+            margin: auto;
+            padding: 0px 30px;
+        }
+        .navbar{
+            position: fixed;
+            z-index: 5;
+            width: 100%;
+            padding: 21px 0;
+            background: crimson;
+            transition: all 0.3s ease;
+        }
+        .navbar.sticky{
+            padding: 10px 0;
+            background: #4363ac;
+        }
+
+        .navbar .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar .menu-list{
+            display: inline-flex;
+        }
+        .navbar .logo a{
+            color :#fff;
+            font-size: 30px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .menu-list li{
+            list-style: none;
+        }
+        .menu-list li a{
+            color :#fff;
+            font-size:18px ;
+            font-weight: 500;
+            margin-left: 25px;           
+            transition: all 0.3s case;
+            text-decoration: none;
+
+        }
+        .navbar.sticky .menu-list li a:hover{
+            color: crimson;
+        }
+        .menu-list li a:hover{
+            color: #4363ac;
+        }
+        .banner{
+            height: 100vh;
+            background:url("images/elearning.png") no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .about{
+            padding:40px 0 ;
+        }
+        .about .title{
+            font-size:35px;
+            font-weight: 700;
+        }
+        .about p{
+            padding-top:20px ;
+            text-align: justify;
+        }
+        .icon {
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        .icon.cancel-btn{
+            position: absolute;
+            right: 30px;
+            top:20px;
+        }
+        @media (max-width:863px){
+            body.disabledScroll{
+                overflow: hidden;
+            }
+            .icon{
+                display: block;
+            } 
+            .icon.hide{
+                display: none;
+            }
+            .navbar .menu-list{
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 40%;
+                max-width: 460px;
+                background: #4363ac;
+                display:block ;
+                padding: 40px 0;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+            .menu-list li a:hover{
+            color: crimson;
+        }
+            .navbar .menu-list.show{
+                right: 0%;
+            }
+            .navbar .menu-list li{
+                margin-top:45px ;
+
+            }
+            .navbar .menu-list li a{
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">e-learning</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+    </nav>
+    <div class="banner"></div>
+    <div class="about">
+        <div class="content">
+            <div class="title">Responsive Sticky Navigation Menu Bar on Scroll using HTML CSS & JavaScript</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo impedit atque consequatur! Iusto distinctio temporibus repellendus labore odit adipisci harum ipsa beatae natus, eum eius, hic aperiam odio! Quasi molestias magnam illo voluptatem iusto ipsam blanditiis, tempore cumque reiciendis quaerat vero tenetur, sequi dolores libero voluptas vitae voluptate placeat dolorum modi ipsa nisi repellat facilis aliquam asperiores. Aut nam repellat harum quas saepe dolorum voluptates ratione, itaque consectetur explicabo a facilis rem mollitia maxime repudiandae fuga reprehenderit, odio cum incidunt labore molestiae quis non perferendis ipsam. Illum, in, deserunt. Ipsa.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit hic excepturi nobis id, eos dolor libero, nam assumenda, at culpa quos perspiciatis ratione ea modi! Natus sapiente a, explicabo sit quisquam eligendi esse provident eos enim doloremque blanditiis aut placeat veniam, libero nostrum quae. Ipsam, iste reprehenderit minima accusantium illo dolorem recusandae, ipsa autem quidem reiciendis a mollitia sit tenetur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint doloremque perspiciatis voluptate ducimus reiciendis rem expedita voluptatibus dicta harum, quo, aspernatur maiores possimus officia quod? Aliquid molestiae illo sequi, tempora perferendis at incidunt nam porro voluptatibus, iste aperiam blanditiis adipisci ducimus repellendus distinctio nostrum ipsum! Voluptas facilis cum, atque tempora magnam beatae sequi! Doloribus expedita, cupiditate quo quod nemo aliquam, mollitia cum ea nam ullam soluta temporibus! Repudiandae incidunt consequatur distinctio deleniti obcaecati sit facilis unde, quisquam veniam ad doloribus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet veniam error deleniti cum beatae non assumenda illum est dolores, possimus suscipit quibusdam eveniet id fuga dolore unde modi, sapiente voluptas. Mollitia veritatis explicabo cumque enim quia voluptates provident totam perferendis excepturi animi assumenda optio minus laudantium eveniet possimus amet blanditiis dolore in fuga atque, earum officia tempora quam similique est.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ad sunt distinctio quidem incidunt cupiditate sequi deleniti, corrupti officia nam veritatis facilis veniam dolorum enim nisi ipsum dolor rem! Doloribus, eaque odit voluptatem iste laboriosam provident facere quo. Cum repellat pariatur, error ratione repellendus nisi quam culpa tempora facere in atque nesciunt, magni est aliquid unde soluta optio! Dolore pariatur, quaerat quo in cupiditate deleniti exercitationem. Facilis suscipit corporis unde aut minima nihil, eum molestias itaque, tenetur, beatae ipsa at!</p>
+        </div>
+    </div>
+    <script>
+        const body =document.querySelector("body");
+        const navbar=document.querySelector(".navbar");
+        const menu=document.querySelector(".menu-list");
+        const menuBtn=document.querySelector(".menu-btn");
+        const cancelBtn=document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+            menu.classList.add("show");
+            menuBtn.classList.add("hide");
+           body.classList.add("disabledScroll");
+        }
+        cancelBtn.onclick = ()=>{
+            menu.classList.remove("show");
+           body.classList.remove("disabledScroll");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll=()=>{
+            this.scrollY>20?navbar.classList.add("sticky"):navbar.classList.remove("sticky");
+        }
+    </script>
+</body>
+</html>
